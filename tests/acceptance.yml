@@ -1,0 +1,14 @@
+default:
+    # http://docs.behat.org/en/latest/user_guide/configuration.html#custom-autoloading
+    autoload:
+        '': '%paths.base%/acceptance/bootstrap'
+    suites:
+        default:
+            contexts:
+                - FeatureContext
+            paths: ['%paths.base%/acceptance']
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://olegbelostotsky.local
+            goutte: ~
+            selenium2: ~
